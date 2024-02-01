@@ -41,7 +41,7 @@ params:
   profileMode:
     enabled: true
     title: "Jason Tran"
-    subtitle: Hi !I am Jason Tran. I highly experienced in data industry with 4+ years of professional experience in designing data pipeline, data warehouse and build ETL process. I also deliver data-driven solutions to stackholder's requirement using analytic tools. I'm interested in new solution technologies.
+    subtitle: Hi ! I am Jason Tran. I highly experienced in DataOps with 4+ years of professional experience as a data engineer in designing data pipeline, data warehouse and build ETL process. I also deliver data-driven solutions to stackholder's requirement using analytic tools. I'm interested in learning some new solution technologies applied for other industries.
     imageUrl: "home/formal-pic-small.jpg"
     imageWidth: 220
     imageHeight: 220
