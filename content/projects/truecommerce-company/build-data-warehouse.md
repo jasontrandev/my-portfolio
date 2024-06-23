@@ -31,9 +31,11 @@ TrueCommerce is a high-performing global supply chain network that provides **ED
 
 At TrueCommerce, software system includes many sub systems, each of it serves for different platforms. This section will only focus on **NetSuite ERP** which is a SaaS cloud-based that helps organizations operate more effectively by having some modules on system. To make it simple, this project will only concentrate on case management.
 
-- <span style="font-size:1.1em; font-weight:bold">Data Model for Case Management</span>
+- <p style="font-size:1.1em; font-weight:bold">Data Model for Case Management</p>
 
 ![](/projects/build-data-warehouse/img1.0.png)
+
+<p style="text-align:center"><b>Image 1</b>: Data model for case management in NetSuite</p>
 
 <table style="width:100%; border: 1px solid">
   <tr>
@@ -87,10 +89,8 @@ At TrueCommerce, software system includes many sub systems, each of it serves fo
   </tr>     
 </table>
 
-<br>
-Let's talk about the life cycle of case management. When a case is first created by a customer, NetSuite system will add one record. Next, every time there is an update value, it will replace an old record by overwriting new value to an exist record, not create a new record in system. For example, a <b>status field</b> starting with a value 'Not Started' and can be updated to one of the values, like 'In Progress', 'On Hold', 'Awating Customer Reply', 'Closed' etc, .
+Let's talk about the life cycle of case management. When a case is first created by a customer, NetSuite system will add one record. Next, every time there is an update value, it will **replace** an old record by **overwriting** new value to an exist record, not create a new record in system. For example, a <b>status field</b> starting with a value 'Not Started' and can be updated to one of the values, like 'In Progress', 'On Hold', 'Awating Customer Reply', 'Closed' etc.
 
-<br>
 All changes history has been saved to a log in NetSuite tab called <b>System Notes</b>. This tab can be used to track changes whenever stakeholders need to query historical data.
 
 ![](/projects/build-data-warehouse/img1.1.png)
