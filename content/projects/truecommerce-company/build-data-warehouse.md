@@ -138,13 +138,19 @@ After completing whole business requirements with stakeholders, we need to organ
 
 When building a data warehouse with Azure Synapse, there are tons of tasks job to complete end-to-end data pipeline, so I summarize some of the basic steps:
 
-<span style="font-size:1.1em; font-weight:bold">1.&nbsp; Ingest data</span>
+- Ingest data
+- Transform data
+- Create pipelines
+- Create triggers
+- Monitor pipeline
+
+<span style="font-size:1.2em; font-weight:bold">1.&nbsp; Ingest data</span>
 <br> The first step is to extract data source from OLTP system. Our company use NetSuite SaaS applications and provides RESTful APIs so I use **generic REST connector** in Azure Synapse to copy data from and to a REST endpoint.
 
 ![](/projects/build-data-warehouse/img2.0.png)
 ![](/projects/build-data-warehouse/img2.1.png)
 
-<span style="font-size:1.1em; font-weight:bold">2.&nbsp; Transform data</span>
+<span style="font-size:1.2em; font-weight:bold">2.&nbsp; Transform data</span>
 <br> Data transformation activities in Synapse pipelines can help you to transform and process raw data. There are several ways to do it and we choose **mapping data flows** to clean data with low-code.
 
 ![](/projects/build-data-warehouse/img3.0.png)
@@ -153,18 +159,18 @@ Once the process of data cleaning and preparation is completed, we might want to
 
 ![](/projects/build-data-warehouse/img3.1.png)
 
-<span style="font-size:1.1em; font-weight:bold">3.&nbsp; Create pipelines</span>
+<span style="font-size:1.2em; font-weight:bold">3.&nbsp; Create pipelines</span>
 <br> The activities in a pipeline define actions to perform on your data. For example, a pipeline could contain a set of activities that ingest and clean log data, and then kick off a mapping data flow to analyze the log data. A pipeline can be executed either manually or by using a **trigger**.
 
 ![](/projects/build-data-warehouse/img4.png)
 
-<span style="font-size:1.1em; font-weight:bold">4.&nbsp; Create triggers</span>
+<span style="font-size:1.2em; font-weight:bold">4.&nbsp; Create triggers</span>
 <br> To kick off all pipelines run data periodically (hourly, daily, etc.), you need to create a **schedule trigger**, configure parameters (start date, recurrence, end date etc.) for the trigger, and associate with a pipeline. In this project, I set a trigger run **daily at 1AM (EST)** to capture in a **previous day's data** because TrueCommerce headquarters is located in US country and our stakeholders need dashboards are refreshed according to **US time zone**.
 
 ![](/projects/build-data-warehouse/img5.1.png)
 ![](/projects/build-data-warehouse/img5.2.png)
 
-<span style="font-size:1.1em; font-weight:bold">5.&nbsp; Monitor pipeline</span>
+<span style="font-size:1.2em; font-weight:bold">5.&nbsp; Monitor pipeline</span>
 <br> With Azure Synapse Analytics, you can create complex pipelines that can automate and integrate your data movement, data transformation, and compute activities within your solution. You can author and monitor these pipelines using Synapse Studio.
 
 ![](/projects/build-data-warehouse/img6.png)
